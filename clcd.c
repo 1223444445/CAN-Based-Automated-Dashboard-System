@@ -1,11 +1,6 @@
+
 #include <xc.h>
 #include "clcd.h"
-
-static void init_config(void)
-{
-    init_clcd();
-  
-}
 
 void clcd_write(unsigned char byte, unsigned char control_bit)
 {
@@ -39,26 +34,10 @@ void init_clcd()
 
 	CLCD_RW = LO;
 
-	
-     /* Startup Time for the CLCD controller */
-    __delay_ms(30);
-    
-    /* The CLCD Startup Sequence */
-    clcd_write(EIGHT_BIT_MODE, INSTRUCTION_COMMAND	);
-    __delay_us(4100);
-    clcd_write(EIGHT_BIT_MODE, INSTRUCTION_COMMAND	);
-    __delay_us(100);
-    clcd_write(EIGHT_BIT_MODE, INSTRUCTION_COMMAND	);
-    __delay_us(1); 
-    
-    CURSOR_HOME;
-    __delay_us(100);
-    TWO_LINE_5x8_MATRIX_8_BIT;
-    __delay_us(100);
-    CLEAR_DISP_SCREEN;
-    __delay_us(500);
-    DISP_ON_AND_CURSOR_OFF;
-    __delay_us(100);
+	CURSOR_HOME;
+	TWO_LINE_5x8_MATRIX_8_BIT;
+	DISP_ON_AND_CURSOR_OFF;
+	CLEAR_DISP_SCREEN;
 }
 
 void clcd_print(const unsigned char *data, unsigned char addr)

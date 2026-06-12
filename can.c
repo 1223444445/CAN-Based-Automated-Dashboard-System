@@ -1,7 +1,7 @@
 /*File for CAN configuration , setting message id's, Data Transmission, */
 #include <xc.h>
 #include "can.h"
-//#include "clcd.h"
+#include "clcd.h"
 
 /* CAN operation mode values*/
 typedef enum _CanOpMode {
@@ -105,5 +105,5 @@ void can_receive(uint16_t *msg_id, uint8_t *data, uint8_t *len) {
     }
 
     // No data available.
-   // *len = 0;
+    //*len = 0;
 }
