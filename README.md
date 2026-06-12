@@ -58,7 +58,6 @@ Additional ECU for event handling, monitoring, or extended dashboard functionali
 * PIC18F4580 Microcontroller Programming
 * Interrupt Handling
 * ADC Interface
-* UART Communication
 * CLCD Interfacing
 * Embedded System Design
 * Real-Time Data Processing
