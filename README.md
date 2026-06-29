@@ -360,7 +360,7 @@ Displays:
 
 **Program:** Emertxe Embedded Systems Training
 
-**Date:** June 2026
+**Date:** March 2026
 
 ---
 
